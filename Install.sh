@@ -227,10 +227,10 @@ function spezial_config_a()
    complete
    echo "Shutdown entfernen"
    sudo sed -i '/sudo shutdown now/d' /var/www/html/shutdown.php
-   sudo echo "/* Shutdown entfernt*/"
-   sudo echo "/*  Folgenden Text in die zweite Zeile eintragen:  */"
-   sudo echo "/*  \$a = system('sudo shutdown now -f -h -P')    */;"
-   sudo echo "/*  Damit wird die Aktion rückgänig gemacht.      */"
+   sudo echo "/* Shutdown entfernt*/" >> /var/www/html/shutdown.php
+   sudo echo "/*  Folgenden Text in die zweite Zeile eintragen:  */" >> /var/www/html/shutdown.php
+   sudo echo "/*  \$a = system('sudo shutdown now -f -h -P')    */;" >> /var/www/html/shutdown.php
+   sudo echo "/*  Damit wird die Aktion rückgänig gemacht.      */" >> /var/www/html/shutdown.php
 }
 
 function complete_spezial()
