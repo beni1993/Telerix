@@ -98,6 +98,9 @@ sudo rm /var/www/html/*
 
 echo "Kopiere Webinterface"
 sudo cp -r ./telerix/* /var/www/html/
+
+echo "Erstelle Uploads Ordner"
+sudo mkdir /var/www/html/uploads
 }
 
 function install_asterisk_files()
