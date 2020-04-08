@@ -10,7 +10,7 @@
 
   <div class="w3-panel w3-light-gray" style="border-radius:5px" >
   <ul class="w3-ul">
-  <li>Telex-Version: 0.01</li>
+  <li>Telerix-Version: 0.01</li>
   <li>Asterisk-Version: <?php system("asterisk -V | egrep '^[^~]+' -o"); ?></li>
   <li>Datum: 3 April 2020</li>
   <li>Webinterface-Lizenz: zLib</li>
