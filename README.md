@@ -11,37 +11,33 @@ Telerix soll eine einfache Lösung bieten, IceCast-Streams z.B von einem Gottesd
 * Ubuntu Sever 18.04 LTS 
 
 
-Software zum herunterladen und entpacken mit folgendem Befehl im Terminal installieren:
+1. Software zum herunterladen und entpacken mit folgendem Befehl im Terminal installieren:    ```sh
+   ```sh
+   sudo apt install unzip wget
+   ```
 
-```sh
-sudo apt install unzip wget
-```
+2. Das Repository mit folgendem Befehl herunterladen:
 
+   ```sh
+   sudo wget https://github.com/beni1993/Telerix/archive/master.zip
+   ```
 
-Das Repository mit folgendem Befehl herunterladen:
+3. Die heruntergeladene Zip-Datei entpacken:
+   ```sh
+   sudo unzip master.zip
+   ```
 
-```sh
-sudo wget https://github.com/beni1993/Telerix/archive/master.zip
-```
-
-Die heruntergeladene Zip-Datei entpacken:
-```sh
-sudo unzip master.zip
-```
-
-Die Ausführung der Skripts in dem entpackten Ordner erlauben:
-```sh
-sudo chmod 777 -R ./Telerix-master
-```
-Den entpackten Ordner öffnen:
-```sh
-cd Telerix-master
-```
-
-Installation starten:
-```sh
-sudo ./Install.sh
-```
-
-Alle weitere Schritte zur Konfiguration beschreibt die Installation.
+4. Die Ausführung der Skripts in dem entpackten Ordner erlauben:
+   ```sh
+   sudo chmod 777 -R ./Telerix-master
+   ```
+5. Den entpackten Ordner öffnen:
+   ```sh
+   cd Telerix-master
+   ```
+6. Installation starten: 
+   ```sh
+   sudo ./Install.sh
+   ```
+7. Alle weitere Schritte zur Konfiguration beschreibt die Installation.
 
