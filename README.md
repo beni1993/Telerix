@@ -33,10 +33,14 @@ Die Ausführung der Skripts in dem entpackten Ordner erlauben:
 ```sh
 sudo chmod 777 -R ./Telerix-master
 ```
+Den entpackten Ordner öffnen:
+```sh
+cd Telerix-master
+```
 
 Installation starten:
 ```sh
-sudo ./Telerix-master/Install.sh
+sudo ./Install.sh
 ```
 
 Alle weitere Schritte zur Konfiguration beschreibt die Installation.
