@@ -97,7 +97,7 @@ echo "Lösche alle Dateien aus dem Webverzeichnis"
 sudo rm /var/www/html/*
 
 echo "Kopiere Webinterface"
-sudo cp -r ./telerix/ /var/www/html/
+sudo cp -r ./telerix/* /var/www/html/
 }
 
 function install_asterisk_files()
@@ -111,7 +111,7 @@ echo "Füge eigene Konfiguration ein:"
 sudo cp ./asterisk_scripts/* /etc/asterisk/
 
 echo "Ansagenverzeichnis erstellen"
-sudo mkdir /usr/share/asterisk/sound/tx
+sudo mkdir /usr/share/asterisk/sounds/tx
 
 echo "Ansagen kopieren"
 sudo cp ./ansagen/*.gsm /usr/share/asterisk/sounds/tx/
