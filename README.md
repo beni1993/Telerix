@@ -2,16 +2,16 @@
 Ein Telefonstreaming-System auf Basis von Asterisk
 
 ## Warum Telerix?
-Eine zusammensetzung aus den Worten Telefon und Asterisk, das durch die Wortähnlichkeit versehentlich bereits öfters Asterix genannt wurde und die Basis dieses Systems bildet.
+Telerix ist eine Zusammensetzung aus dem Wort Telefon und dem Wort Asterisk, wobei letztgenanntes durch die ähnlichkeit versehentlich bereits öfters Asterix genannt wurde. Asterisk bildet die Basis dieses Systems und wird deshalb auch im Namen angedeutet.
 
 ## Wozu Telerix?
-Telerix soll eine einfache Lösung bieten, IceCast-Streams z.B von einem Gottesdienst, für viele Telefonhörer zugänglich zu machen.
+Telerix soll eine einfache Lösung bieten, IceCast-Streams z.B von einem Gottesdienst für viele Telefonzuhörer zugänglich zu machen.
+
 ## Installation
 
 * Ubuntu Sever 18.04 LTS 
 
-
-1. Software zum herunterladen und entpacken mit folgendem Befehl im Terminal installieren:    ```sh
+1. Software zum herunterladen und entpacken mit folgendem Befehl im Terminal installieren:
    ```sh
    sudo apt install unzip wget
    ```
@@ -40,4 +40,3 @@ Telerix soll eine einfache Lösung bieten, IceCast-Streams z.B von einem Gottesd
    sudo ./Install.sh
    ```
 7. Alle weitere Schritte zur Konfiguration beschreibt die Installation.
-
