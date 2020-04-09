@@ -52,6 +52,24 @@ fi
 echo ""
 }
 
+function show_localadress()
+{
+# Hole lokale IP Adresse
+ipaddr=$(ifconfig)
+ipaddr=$(echo "$ipaddr" | sed '/inet 127.0.0.1/d')
+ipaddr=$(echo "$ipaddr" | egrep 'inet [0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' -o)
+ipaddr=$(echo "$ipaddr" | sed 's/\(inet\)\( \+\)/\2/g')
+ipaddr=$(echo "$ipaddr" | sed 's/ //g')
+
+#Versuche lokale Telerix-Seite zu laden und zu erkennen
+webinterfacecon=$(curl -s "$ipaddr" | grep "TELERIX" -o | wc -l)
+
+if [ "$webinterfacecon" != "0" ]
+then
+   echo "Das Telerix-Webinterface ist nun unter $ipaddr erreichbar."
+fi
+}
+
 function ask_config_data()
 {
    echo "=> SIP-Daten eintragen <="
@@ -206,6 +224,7 @@ function complete()
    configurate_asterisk
    change_rights
    start_asterisk
+   show_localadress
 }
 
 function complete_config_later()
@@ -217,12 +236,12 @@ function complete_config_later()
    echo "   die SIP und Stream Daten im Webinterface eingeben."
    echo " "
    safetyquestion
-   ask_config_data
    install_applications -y
    install_webinterface
    install_asterisk_files
    change_rights
    start_asterisk
+   show_localadress
 }
 
 function spezial_config_a()
