@@ -1,6 +1,8 @@
 # Telerix
 Ein Telefonstreaming-System auf Basis von Asterisk
 
+**Hinweis: Auf keinen Fall die aktuelle Version auf einem öffentlich erreichbaren Server installieren! Diese Version ist nur zum Betrieb in einer virtuellen Maschine oder im privaten lokalen Netzwerk gedacht!**
+
 ## Warum Telerix?
 Telerix ist eine Zusammensetzung aus dem Wort Telefon und dem Wort Asterisk, wobei letztgenanntes durch die ähnlichkeit versehentlich bereits öfters Asterix genannt wurde. Asterisk bildet die Basis dieses Systems und wird deshalb auch im Namen angedeutet.
 
