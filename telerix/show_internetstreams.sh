@@ -29,10 +29,13 @@ mountpoint=$(echo "$listenurl" | egrep '[^/]+"$' -o | sed 's/\"//g')
 full=$(paste <(echo "$mountpoint") <(echo "$listener") <(echo "$maxlistener") <(echo "$listenurl")) 
 
 #Daten als Liste ausgeben
-echo "$full" |awk '{print "<tr><td><a href="$4" target=\"_blank\">"$1"</a></td><td>"$2"</td><td>"$3"</td></tr>"}'
+full=$(echo "$full" | awk '{print "<tr><td><a href="$4" target=\"_blank\">"$1"</a></td><td>"$2"</td><td>"$3"</td></tr>"}')
+
+#Unvollständige Zeilen ohne Link filtern und ausgeben
+echo "$full" | grep -v "href=[ ]\+target"
 
 #Check ob es aktive Streams gibt
-avaliable=$(echo "$full" | sed 's/ //g' | grep -v "^$" | wc -l)
+avaliable=$(echo "$full" | sed 's/ //g' | sed 's/\t//g' | grep -v "^$" | wc -l)
 
 # Erstelle Rückmeldung falls kein Stream aktiv ist
 if [ "$avaliable" == "0" ]
