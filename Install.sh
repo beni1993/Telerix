@@ -107,6 +107,8 @@ sudo apt install madplay "$1"
 echo "Installiere lame"
 sudo apt install lame "$1"
 
+echo "Installiere jq"
+sudo apt install jq "$1"
 }
 
 function install_webinterface()
