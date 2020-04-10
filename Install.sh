@@ -109,6 +109,9 @@ sudo apt install lame "$1"
 
 echo "Installiere jq"
 sudo apt install jq "$1"
+
+echo "Installiere gawk"
+sudo apt install gawk "$1"
 }
 
 function install_webinterface()
