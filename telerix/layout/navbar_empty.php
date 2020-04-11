@@ -33,34 +33,17 @@ function togglemenu() {
 </script>
 
 </head>
-
-<?php
-   require('checklogin.php');
-?>
 <body bgcolor="#d4e1ff">
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="togglemenu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="start.php" class="w3-bar-item w3-button w3-padding-large w3-light-blue">TELERIX</a>
-    <a href="settings.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Nummerverwaltung</a>
-    <a href="configuration.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Konfiguration</a>
-    <a href="help.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Hilfe</a>
-    <a href="info.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Info</a>
-    <a href="logout.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-red w3-right">Logout</a>
+    <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-light-blue">TELERIX</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navsmall" class="w3-bar-block w3-hide w3-white w3-hide-large w3-hide-medium w3-large">
-    <a href="settings.php" class="w3-bar-item w3-button w3-padding-large">Nummerverwaltung</a>
-    <a href="configuration.php" class="w3-bar-item w3-button w3-padding-large">Konfiguration</a>
-    <a href="help.php" class="w3-bar-item w3-button w3-padding-large">Hilfe</a>
-    <a href="info.php" class="w3-bar-item w3-button w3-padding-large">Info</a>
-    <a href="logout.php" class="w3-bar-item w3-button w3-padding-large">Logout</a>
   </div>
-
-
-
 
 </div> 
  <!-- Navbar Background -->
@@ -69,15 +52,10 @@ function togglemenu() {
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large" style="color:#d4e1ff">TELERIX</a>
 
-    <a href="impressum.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="color:#d4e1ff">>Nummerverwaltung</a>
-    <a href="impressum.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="color:#d4e1ff">Konfiguration</a>
-    <a href="impressum.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="color:#d4e1ff">Hilfe</a>
-    <a href="impressum.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="color:#d4e1ff">Info</a>
-    <a href="impressum.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right" style="color:#d4e1ff">Logout</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="impressum.html" class="w3-bar-item w3-button w3-padding-large">Impressum</a>
+
   </div>
 </div>

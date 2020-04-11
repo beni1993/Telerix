@@ -63,17 +63,14 @@ input[type=submit]:hover {
 }
 </style>
 
-<?php
-   require('checklogin.php');
-?>
 <div class="container">
-  <form action="set_sipconfig.php" method="POST">
+  <form action="login.php" method="POST">
   <div class="row">
     <div class="col-25">
-      <label for="fname" style="color: black">SIP-ID</label>
+      <label for="fname" style="color: black">Benutzer</label>
     </div>
     <div class="col-75">
-    <input type="text" id="fname" name="sip_id" placeholder="Deine SIP-ID vom Anbieter" value="<?php system("./get_sip_id.sh"); ?>">
+    <input type="text" id="fname" name="tuser" placeholder="Dein Telerix Benutzername" value="">
     </div>
   </div>
   <div class="row">
@@ -81,20 +78,12 @@ input[type=submit]:hover {
       <label for="lname" style="color: black">Passwort</label>
     </div>
     <div class="col-75">
-      <input type="password" id="lname" name="sip_pw" placeholder="Das Passwort zu deiner SIP-ID" value="<?php system("./get_sip_pw.sh"); ?>">
-    </div>
-  </div>
-  <div class="row">
-   <div class="col-25">
-      <label for="lname" style="color: black">Registrar</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="registrar" name="sip_reg" placeholder="z.B. sipgate.de" value="<?php system("./get_sip_reg.sh"); ?>">
+      <input type="password" id="lname" name="tpass" placeholder="Dein Telerix Passwort" value="">
     </div>
   </div>
   <br />
   <div class="row">
-    <input type="submit" value="Speichern und Anwenden">
+    <input type="submit" value="Login">
   </div>
   </form>
 </div>

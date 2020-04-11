@@ -1,4 +1,5 @@
 <?php
+   require('checklogin.php');
    include('./layout/navbar.php');
 ?>
 

@@ -62,7 +62,9 @@ input[type=submit]:hover {
   }
 }
 </style>
-
+<?php
+   require('checklogin.php');
+?>
 <div class="container">
   <form action="set_stream.php" method="POST">
   <div class="row">

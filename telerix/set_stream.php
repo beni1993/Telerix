@@ -1,5 +1,6 @@
 <?php
 $stream = $_POST["inetstream"];
+require('checklogin.php');
 
 /*Stream von allen Sonderzeichen bereinigen*/
 /* Erlaubt: A-Z a-z 0-9 . : / -  */
