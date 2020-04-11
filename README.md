@@ -42,3 +42,23 @@ Telerix soll eine einfache Lösung bieten, IceCast-Streams z.B von einem Gottesd
    sudo ./Install.sh
    ```
 7. Alle weitere Schritte zur Konfiguration beschreibt die Installation.
+
+# Alternative Installationsvariante (setzt git vorraus):
+
+1. Repository clonen
+   ```sh
+   git clone https://github.com/beni1993/Telerix.git
+   ```
+
+2. Repository Ordner öffnen
+   ```sh
+   cd Telerix
+   ```
+
+3. Installation ausführen
+   ```sh
+   sudo ./Install.sh
+   ```
+
+4. Alle weiteren Schritte zur Konfiguration beschreibt die Installation.
+
