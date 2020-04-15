@@ -11,9 +11,9 @@
 
   <div class="w3-panel w3-light-gray" style="border-radius:5px" >
   <ul class="w3-ul">
-  <li>Telerix-Version: 0.01</li>
+  <li>Telerix-Version: 0.02</li>
   <li>Asterisk-Version: <?php system("asterisk -V | egrep '^[^~]+' -o"); ?></li>
-  <li>Datum: 9 April 2020</li>
+  <li>Datum: 15 April 2020</li>
   <li>Webinterface-Lizenz: zLib</li>
   <li>Betriebssystem: <?php system("lsb_release -d | sed 's/Description..//g'"); ?></li>
   <li>Dankesch&oumln f&uumlr die Unterst&uumltzung an Edgar W, Martin G, Eduard D, Alex J, Daniel L und Viktor B</li>
