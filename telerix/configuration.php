@@ -32,9 +32,9 @@
  </div>
   <!-- SIP - Konfiguration End-->
 
-  <!-- Passwort - Konfiguration Begin-->
+  <!-- Zugangsdaten - Konfiguration Begin-->
   <div class="w3-panel w3-card-4 w3-blue">
-  <h3 style="color: #ffffff">Passwort &auml;ndern:</h3>
+  <h3 style="color: #ffffff">Zugangsdaten &auml;ndern:</h3>
   <?php
   include("changepass.php");
   ?>
@@ -42,7 +42,7 @@
   <br />
   <br/>
   </div>
-  <!-- Passwort - Konfiguration End-->
+  <!-- Zugangsdaten - Konfiguration End-->
 
 
 

@@ -68,6 +68,16 @@ input[type=submit]:hover {
 ?>
 <div class="container">
   <form action="action_change_pass.php" method="POST">
+  <!-- Username -->
+  <div class="row">
+    <div class="col-25">
+      <label for="fname" style="color: black">Benutzername</label>
+    </div>
+    <div class="col-75">
+    <input type="text" id="fname" name="telerix_user" placeholder="Dein neuer Benutzername" value="">
+    </div>
+  </div>
+  <!-- End -->
   <div class="row">
     <div class="col-25">
       <label for="fname" style="color: black">Altes Passwort</label>
@@ -94,7 +104,7 @@ input[type=submit]:hover {
   </div>
   <br />
   <div class="row">
-    <input type="submit" value="Speichern und Anwenden">
+    <input type="submit" onclick="if(!confirm('Zugangsdaten anlegen? Nach dem ersten Anlegen, besteht eine Zugangsdatenpflicht. Diese lassen sich hier ändern.')) return false;" value="Speichern und Anwenden">
   </div>
   </form>
 </div>

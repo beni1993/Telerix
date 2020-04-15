@@ -1,4 +1,13 @@
 <?php
+   include('./nopassword.php');
+   if($key == "NO_PASSWORD_REQUIRED")
+   {
+      session_start();
+      $_SESSION['status'] = "logged in";
+      include('./start.php');
+      exit;
+   } 
+
    include('./layout/navbar_empty.php');
 ?>
 <div class="w3-container w3-padding-32" style="background-color: #d4e1ff">
