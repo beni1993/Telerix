@@ -1,4 +1,5 @@
 <?php
+require('checklogin.php');
 $sip_id = $_POST["sip_id"];
 $sip_password = $_POST["sip_pw"];
 $sip_registrar = $_POST["sip_reg"];

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
+<?php
+   require('checklogin.php');
+?>
 <html>
 <body>
+
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
     Select image to upload:

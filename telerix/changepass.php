@@ -67,34 +67,44 @@ input[type=submit]:hover {
    require('checklogin.php');
 ?>
 <div class="container">
-  <form action="set_sipconfig.php" method="POST">
+  <form action="action_change_pass.php" method="POST">
+  <!-- Username -->
   <div class="row">
     <div class="col-25">
-      <label for="fname" style="color: black">SIP-ID</label>
+      <label for="fname" style="color: black">Benutzername</label>
     </div>
     <div class="col-75">
-    <input type="text" id="fname" name="sip_id" placeholder="Deine SIP-ID vom Anbieter" value="<?php system("./get_sip_id.sh"); ?>">
+    <input type="text" id="fname" name="telerix_user" placeholder="Dein neuer Benutzername" value="">
+    </div>
+  </div>
+  <!-- End -->
+  <div class="row">
+    <div class="col-25">
+      <label for="fname" style="color: black">Altes Passwort</label>
+    </div>
+    <div class="col-75">
+    <input type="password" id="fname" name="telerix_old_pw" placeholder="Dein aktuelles Passwort" value="">
     </div>
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="lname" style="color: black">Passwort</label>
+      <label for="lname" style="color: black">Neues Passwort</label>
     </div>
     <div class="col-75">
-      <input type="password" id="lname" name="sip_pw" placeholder="Das Passwort zu deiner SIP-ID" value="<?php system("./get_sip_pw.sh"); ?>">
+      <input type="password" id="lname" name="telerix_new_pw_a" placeholder="Das neue Passwort" value="">
     </div>
   </div>
   <div class="row">
    <div class="col-25">
-      <label for="lname" style="color: black">Registrar</label>
+      <label for="lname" style="color: black">Neues Passwort</label>
     </div>
     <div class="col-75">
-      <input type="text" id="registrar" name="sip_reg" placeholder="z.B. sipgate.de" value="<?php system("./get_sip_reg.sh"); ?>">
+      <input type="password" id="registrar" name="telerix_new_pw_b" placeholder="Die Wiederholung des neuen Passworts" value="">
     </div>
   </div>
   <br />
   <div class="row">
-    <input type="submit" value="Speichern und Anwenden">
+    <input type="submit" onclick="if(!confirm('Zugangsdaten anlegen? Nach dem ersten Anlegen, besteht eine Zugangsdatenpflicht. Diese lassen sich hier ändern.')) return false;" value="Speichern und Anwenden">
   </div>
   </form>
 </div>
