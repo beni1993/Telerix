@@ -3,7 +3,7 @@
 # TELERIX - Installationsskript           # 
 #                                         #
 # Autor: Benjamin Hedert                  #
-# Stand: 8 April 2020                     #
+# Stand: 18 April 2021                    #
 # Repository: github.com/beni1993/Telerix #
 #                                         #
 # Dies ist freie Software und steht unter #
@@ -55,7 +55,7 @@ echo ""
 function show_localadress()
 {
 # Hole lokale IP Adresse
-ipaddr=$(ifconfig)
+ipaddr=$(ip addr show)
 ipaddr=$(echo "$ipaddr" | sed '/inet 127.0.0.1/d')
 ipaddr=$(echo "$ipaddr" | egrep 'inet [0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}' -o)
 ipaddr=$(echo "$ipaddr" | sed 's/\(inet\)\( \+\)/\2/g')
@@ -94,12 +94,12 @@ sudo apt install asterisk "$1"
 echo "Installiere mpg123 Player"
 sudo apt install mpg123 "$1"
 
+echo "Installiere PHP"
+sudo apt install php "$1"
+#sudo apt install php-pear php7.2-curl php7.2-dev php7.2-gd php7.2-mbstring php7.2-zip php7.2-mysql php7.2-xml "$1"
+
 echo "Installiere Apache2 Webserver"
 sudo apt install apache2 "$1"
-
-echo "Installiere PHP7.2"
-sudo apt install php7.2 "$1"
-sudo apt install php-pear php7.2-curl php7.2-dev php7.2-gd php7.2-mbstring php7.2-zip php7.2-mysql php7.2-xml "$1"
 
 echo "Installiere madplay"
 sudo apt install madplay "$1"
@@ -275,13 +275,23 @@ function complete_spezial()
    echo ""
    echo -n ">> "
 
-   read config_auswahl
+  read config_auswahl
 
    case "$config_auswahl" in
       1) spezial_config_a ;;
    esac
 }
 
+function os_update()
+{
+   echo "Aktualisiere Betriebssystempaketliste"
+   sudo apt-get update "-y"
+}
+
+function keymap_de()
+{
+   sudo loadkeys de
+}
 ### Anwendungsstart ###
 
 echo "###############################################################"
@@ -303,7 +313,9 @@ echo "   1 - Automatische Installation und Einrichtung (empfohlen)"
 echo "   2 - Automatische Installation ohne Konfiguration"
 echo "   3 - Automatische Installation und spezielle Konfiguration"
 echo "   4 - Weitere Informationen zu Telerix lesen"
-echo "   5 - Beenden"
+echo "   5 - Betriebssystempakete aktualisieren"
+echo "   6 - Tastaturlayout auf Deutsch einstellen"
+echo "   7 - Beenden"
 echo " "
 echo -n ">> "
 
@@ -314,7 +326,10 @@ case "$auswahl" in
    2) complete_config_later ;;
    3) complete_spezial ;;
    4) more_info ;;
-   5) ;;
+   5) os_update ;;
+   6) keymap_de ;;
+   7) ;;
 esac
 
-### ENDE 
+### ENDE
+
