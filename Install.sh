@@ -132,6 +132,7 @@ echo "Lösche bereits vorhandene Standarddateien"
 sudo rm /etc/asterisk/extensions.conf
 sudo rm /etc/asterisk/musiconhold.conf
 sudo rm /etc/asterisk/sip.conf
+sudo rm /etc/asterisk/codecs.conf
 
 echo "Füge eigene Konfiguration ein:"
 sudo cp ./asterisk_scripts/* /etc/asterisk/
