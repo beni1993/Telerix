@@ -117,7 +117,7 @@ sudo apt install gawk "$1"
 function install_webinterface()
 {
 echo "Lösche alle Dateien aus dem Webverzeichnis"
-sudo rm /var/www/html/*
+sudo rm -r /var/www/html/*
 
 echo "Kopiere Webinterface"
 sudo cp -r ./telerix/* /var/www/html/
