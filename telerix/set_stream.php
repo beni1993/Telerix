@@ -8,5 +8,5 @@ $stream = preg_replace ( '/[^a-z0-9.:\/\-_]/i', '', $stream );
 system("./set_stream.sh $stream");
 system("./asterisk_restart.sh");
 
-include('configuration.php')
+header('Location: configuration.php')
 ?>

@@ -24,5 +24,5 @@
    }
 
    //Zeige Seite
-   include('configuration.php');
+   header('Location: configuration.php');
 ?>

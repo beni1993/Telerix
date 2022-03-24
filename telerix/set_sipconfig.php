@@ -25,5 +25,5 @@ $sip_registrar = preg_replace ( '/[^a-z0-9.:\/\-_]/i', '', $sip_registrar);
 system("./set_sipconfig.sh $sip_id $sip_password $sip_registrar");
 system("./asterisk_restart.sh");
 
-include('configuration.php');
+header('Location: configuration.php');
 ?>
